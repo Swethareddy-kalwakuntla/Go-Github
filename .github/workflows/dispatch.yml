@@ -6,5 +6,10 @@ jobs:
   log:
     runs-on: ubuntu-latest
     steps:
-      - name: Event received
-        run: echo "Event received"
+    - uses: actions/checkout@v2
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.19'  # Specify the Go version you want to use
+    - name: Run Go Checks
+      uses: ./.github/actions/go-checks
