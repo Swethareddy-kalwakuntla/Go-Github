@@ -1,0 +1,11 @@
+name: 'Go Checks'
+description: 'Runs Go tests and checks for code quality'
+runs:
+  using: 'composite'
+  steps:
+    - run: go version
+      shell: bash
+    - run: go test -v ./...
+      shell: bash
+    - run: go vet ./...
+      shell: bash
