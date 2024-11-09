@@ -12,13 +12,6 @@ import (
 
 func main() {
 	fruits := []string{"peach", "banana", "kiwi"}
-
-	// We implement a comparison function for string
-	// lengths. `cmp.Compare` is helpful for this.
-	
-
-	// Now we can call `slices.SortFunc` with this custom
-	// comparison function to sort `fruits` by name length.
 	
 	fmt.Println(fruits)
 
