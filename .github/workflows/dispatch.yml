@@ -22,7 +22,5 @@ jobs:
       with:
         path: target-repo
     - name: Run Go Checks
-      run: | 
-        cd $GITHUB_WORKSPACE/source-repo 
-        ../target-repo/.github/actions/go-checks
+      uses: ./target-repo/.github/actions/go-checks
 
