@@ -6,7 +6,8 @@ jobs:
   log:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: checking out source trigger code
+      uses: actions/checkout@v2
       with: 
         repository: ${{ github.event.client_payload.repository }} 
         ref: ${{ github.event.client_payload.branch }} 
@@ -15,5 +16,8 @@ jobs:
       uses: actions/setup-go@v4
       with:
         go-version: '1.19'  # Specify the Go version you want to use
+    - name: checking out local code
+      uses: actions/checkout@v2
     - name: Run Go Checks
       uses: ./.github/actions/go-checks
+      
