@@ -12,12 +12,15 @@ jobs:
         repository: ${{ github.event.client_payload.repository }} 
         ref: ${{ github.event.client_payload.branch }} 
         token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        path: source-repo
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
         go-version: '1.19'  # Specify the Go version you want to use
     - name: checking out local code
       uses: actions/checkout@v2
+      with:
+        path: target-repo
     - name: Run Go Checks
-      uses: ./.github/actions/go-checks
-      
+      uses: ../target-repo/.github/actions/go-checks
+
