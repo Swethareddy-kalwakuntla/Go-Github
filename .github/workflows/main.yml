@@ -8,6 +8,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with: 
+        path: source-repo
     - name: Set up Go
       uses: actions/setup-go@v4
       with:

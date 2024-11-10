@@ -15,5 +15,9 @@ runs:
         ls
         go test -v ./...
       shell: bash
-    - run: go vet ./...
+    - run: |
+        cd source-repo
+        pwd
+        ls
+        go vet ./...
       shell: bash
