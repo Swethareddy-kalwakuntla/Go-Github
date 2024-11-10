@@ -10,10 +10,10 @@ runs:
     - run: pwd
       shell: bash
     - run: |
-      cd source-repo
-      pwd
-      ls
-      go test -v ./...
+        cd source-repo
+        pwd
+        ls
+        go test -v ./...
       shell: bash
     - run: go vet ./...
       shell: bash
