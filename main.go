@@ -16,7 +16,7 @@ func main() {
 	fmt.Println(fruits)
 
 	// We can use the same technique to sort a slice of
-	// values that aren't built-in types.
+	// values that aren't built-in.
 	type Person struct {
 		name string
 		age  int
