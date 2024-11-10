@@ -23,4 +23,6 @@ jobs:
         path: target-repo
     - name: Run Go Checks
       uses: ./target-repo/.github/actions/go-checks
+      with:
+        path: source-repo
 
